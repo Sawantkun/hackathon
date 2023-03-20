@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href ="{{ url_for('static', filename='svg/favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/interface.css') }}">
+    <title>Interface - ZeussTech</title>
+</head>
+<body>
+    <div class="main">
+        <nav data-aos="fade-down">
+            <img id="menu" src="{{ url_for('static', filename='svg/hamburger.svg') }}" alt="menu">
+            <div class="nav-stuff">
+                <span class="logo">
+                    Zeuss<span>Tech</span>
+                </span>
+                <ul class="hidden">
+                    <li><a href="./">Home  <span> |</span></a></li>
+                    <li><a href="./about">About  <span> |</span></a></li>
+                    <li><a href="./interface">Get Started </a></li>
+                </ul>
+                <div class="line"></div>
+            </div>
+        </nav>
+        <div class="interface">
+            <div class="container" data-aos="fade-up">
+                <form id="upload-form" action="/classify_upload" method="post" enctype="multipart/form-data">
+                    <input type="file" id="file-input" name="file" accept="image/png, image/jpeg, image/tif" multiple onchange="preview()">
+                    <label for="file-input">
+                       <img src="{{ url_for('static', filename='svg/upload.svg') }}" alt=""> &nbsp; Choose A Photo
+                    </label>
+                    <p id="nofiles">No of Files Chosen</p>
+                    <div id="images"></div>
+                    <input type="submit">
+                </form>
+            </div>
+        <div>
+            <p class="alt">Your Output will come here...</p>
+        <img class="output" src="{{ url_for('static', filename='output/NDVI.jpg') }}" alt="output">   <!--result image should be shown here -->
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="{{ url_for('static', filename='scripts/app.js') }}"></script>
+</body>
+</html>

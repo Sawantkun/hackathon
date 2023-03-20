@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href ="{{ url_for('static', filename='svg/favicon.png') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>ZeussTech - Surveying From Sky</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <img id="menu" src="{{ url_for('static', filename='svg/hamburger.svg') }}" alt="menu">
+            <div class="nav-stuff" data-aos="fade-down" data-aos-delay="300">
+                <span class="logo">
+                    Zeuss<span>Tech</span>
+                </span>
+                <ul class="hidden">
+                    <li><a href="./">Home  <span> |</span></a></li>
+                    <li><a href="./about">About  <span> |</span></a></li>
+                    <li><a href="./interface">Get Started </a></li>
+                </ul>
+                <div class="line"></div>
+            </div>
+        </nav>
+        <div class="home">
+            <video autoplay loop muted plays-inline data-aos="fade" data-aos-delay="300">
+                <source src="{{ url_for('static', filename='videos/background.mp4') }}" type="video/mp4">
+            </video>
+            <div class="home-content">
+                <h1 data-aos="fade-up" data-aos-delay="1000">Surveying From Sky</h1>
+                <h2 data-aos="fade-up" data-aos-delay="1500">A unique photogrammetry service suite for mobile and drone mapping</h2>
+                <button data-aos="fade-up" data-aos-delay="2000">Discover</button>
+            </div>
+            <div class="circle"><span data-aos="fade-left" data-aos-delay="2500">ZeussTech</span></div> 
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="{{ url_for('static', filename='scripts/app.js') }}"></script>
+</body>
+</html>

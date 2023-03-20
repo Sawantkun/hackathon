@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href ="{{ url_for('static', filename='svg/favicon.png') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+    <title>About - ZeussTech</title>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <img id="menu" src="{{ url_for('static', filename='svg/hamburger.svg') }}" alt="menu">
+            <div class="nav-stuff" data-aos="fade-down" data-aos-delay="300">
+                <span class="logo">
+                    Zeuss<span>Tech</span>
+                </span>
+                <ul class="hidden">
+                    <li><a href="./">Home  <span> |</span></a></li>
+                    <li><a href="./about">About  <span> |</span></a></li>
+                    <li><a href="./interface">Get Started </a></li>
+                </ul>
+                <div class="line"></div>
+            </div>
+        </nav>
+        <div class="about">
+             <div class="about-content">
+                <h1 data-aos="fade-up" data-aos-delay="1200">About Us</h1>
+                <p data-aos="fade-up" data-aos-delay="1700">We here , at Zeuss technologies are constantly pushing to reduce the gap between agriculture and advanced technologies to benefit the Indian farmers and industries related to it. Let's explode the Industry together!</p>
+                <a href="/interface"><button data-aos="fade-up" data-aos-delay="2200">Get Started</button></a>
+                <div class="line"  data-aos="fade-right" data-aos-delay="700"></div>
+             </div>
+             <img src="{{ url_for('static', filename='images/drone2.png') }}" alt="drone" data-aos="fade-left" data-aos-delay="2700">
+        </div>
+        <script src="{{ url_for('static', filename='scripts/app.js') }}"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+</html>

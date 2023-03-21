@@ -52,3 +52,6 @@ The data then gets uploaded to our developed web app (Zeuss tech) to calculate t
 </ul><ul>
 <li>alive and automated detection of affected areas</li>
 </ul>
+<img src="./screenshots/home.png" alt="ss"/>
+<img src="./screenshots/about.png" alt="ss"/>
+<img src="./screenshots/Model.png" alt="ss"/>

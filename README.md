@@ -24,7 +24,7 @@ The data then gets uploaded to our developed web app (Zeuss tech) to calculate t
 </ul><ul>
 <li>clean and minimalist ui</li>
 </ul><ul>
-<li>use tif files to generate NDVI image</li>
+<li>use tif files to generate NDVI image from the /static/images directory</li>
 </ul><ul>
 <li>identify are that area problematic in crop</li>
 </ul><ul>
